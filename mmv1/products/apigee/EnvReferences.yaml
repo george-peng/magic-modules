@@ -16,8 +16,9 @@ name: 'EnvReferences'
 base_url: '{{env_id}}/references'
 create_url: '{{env_id}}/references/'
 delete_url: '{{env_id}}/references/{{name}}'
+update_url: '{{env_id}}/references/{{name}}'
 self_link: '{{env_id}}/references/{{name}}'
-immutable: true
+
 description: |
   An `Environment Reference` in Apigee.
 references: !ruby/object:Api::Resource::ReferenceLinks
@@ -75,5 +76,4 @@ properties:
     name: 'refers'
     description: |
       Required. The id of the resource to which this reference refers. Must be the id of a resource that exists in the parent environment and is of the given resourceType.
-    immutable: true
     required: true
